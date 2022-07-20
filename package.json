@@ -1,6 +1,6 @@
 {
   "name": "alpaca-wxw",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Alpaca Bi Info",
   "main": "./dist/index.js",
   "bin": {
