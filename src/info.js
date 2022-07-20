@@ -36,27 +36,27 @@ const getInfo = language => {
     p1('              AlPACA ') + p2(' RESUME ') + p1('             '),
     EMPTY_ROW,
     cc(info.generalInfo), // GENERAL INFO
-  //   EMPTY_ROW,
+    //   EMPTY_ROW,
     h1(info.generalInfoName) + r1(info.generalInfoName2),
     h2(info.generalInfoBirth) + r2(info.generalInfoBirth2),
     h1(info.generalInfoAddress) + r1(info.generalInfoAddress2),
     h2(info.generalInfoCareer) + r2(info.generalInfoCareer2),
     EMPTY_ROW,
     cc(info.socialLinks),
-  //   EMPTY_ROW,https://www.linkedin.com/in/AlpacaBi
-    h1(info.socialLinksMail) + r1(' biguokang@outlook.com          '),
-    h2(info.socialLinksGithub) + r2(' github.com/AlpacaBi            '),
+    //   EMPTY_ROW,https://www.linkedin.com/in/AlpacaBi
+    h1(info.socialLinksMail) + r1(' 969409112@qq.com          '),
+    h2(info.socialLinksGithub) + r2(' github.com/abc            '),
     h1(info.socialLinksBlog) + r1(' blog.alpaca.run                '),
-    h2(info.socialLinksWechat) + r2(' workbiguokang                  '),
-    h1(info.socialLinkslLinkedIn) + r1(' linkedin.com/in/AlpacaBi       '),
+    h2(info.socialLinksWechat) + r2(' c777777__                  '),
+    h1(info.socialLinkslLinkedIn) + r1(' 1       '),
     EMPTY_ROW,
     cc(info.professionalSkills),
-  //   EMPTY_ROW,
+    //   EMPTY_ROW,
     t1(' Javascript  ') + MG() + t1('     Vue     ') + MG() + t1('    React     '),
     t2('   Node.js   ') + MG() + t2('    Deno     ') + MG() + t2('    Docker    '),
     EMPTY_ROW
   ];
-  
+
   return PROFILE_ROWS.map((row) => {
     const m = bk(repeat(4, ' '));
     return m + row + m;

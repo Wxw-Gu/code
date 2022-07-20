@@ -32,7 +32,7 @@ const questions1 = [
 ];
 
 
-const main = async() => {
+const main = async () => {
 
     const answer = await prompt(questions1)
 
@@ -48,25 +48,25 @@ const main = async() => {
             type: 'input',
             message: '你:',
             name: 'phone',
-            validate: function(val) {
-                if(val == "exit"){
+            validate: function (val) {
+                if (val == "exit") {
                     console.log(`\n${chalk.hex("#f90").bold("Alpaca AI")}已退出`);
                     return true
-                }else{
+                } else {
                     request.post({
-                        url:'https://alpaca.run/apis/ai/text', 
-                        form:{
+                        url: 'https://alpaca.run/apis/ai/text',
+                        form: {
                             "textType": "npx",
                             "text": val
                         }
-                    }, function(error, response) {
+                    }, function (error, response) {
                         let resText = JSON.parse(response.body).message
                         console.log(`\n${chalk.hex("#f90").bold("Alpaca AI")}: ${resText}\n`);
                         return false
                     })
 
                 }
-                
+
             }
         }
     ];
@@ -79,9 +79,9 @@ const main = async() => {
             choices: [
                 {
                     name: languageMap.get(language).alpacaAIMessage,
-                    value: async() => {
+                    value: async () => {
                         await sleep(2)
-                        console.log(`${new Date().toLocaleString( )} 已成功连入Alpaca AI服务器,输入${chalk.red.bold("exit")}即可退出`)
+                        console.log(`${new Date().toLocaleString()} 已成功连入Alpaca AI服务器,输入${chalk.red.bold("exit")}即可退出`)
                         await sleep(1)
                         console.log(`${chalk.hex("#f90").bold("Alpaca AI")}: 你好啊，我是Alpaca AI,一个人工智能，你可以打字和我聊天！！！！`)
                         await sleep(1)
@@ -96,27 +96,27 @@ const main = async() => {
                 },
                 {
                     name: languageMap.get(language).question1,
-                    value: async() => {
-                        open("mailto:biguokang@outlook.com");
+                    value: async () => {
+                        open("mailto:969409112@qq.com");
                         console.log(languageMap.get(language).answer1);
                         await sleep(3)
-                        skipToQuestions2() 
+                        skipToQuestions2()
                     }
                 },
                 {
                     name: languageMap.get(language).question2,
-                    value: async() => {
+                    value: async () => {
                         clearScreen()
                         console.log(languageMap.get(language).answer2)
                         const url = 'https://u.wechat.com/MI8g1d4fSdEntqOdCrp-DU8';
-                        qrcode.generate(url,{small:true});
+                        qrcode.generate(url, { small: true });
                         await sleep(10)
                         skipToQuestions2()
                     }
                 },
                 {
                     name: languageMap.get(language).questionLinkedIn,
-                    value: async() => {
+                    value: async () => {
                         console.log(languageMap.get(language).answerLinkedIn);
                         open("https://linkedin.com/in/AlpacaBi")
                         await sleep(3)
@@ -125,7 +125,7 @@ const main = async() => {
                 },
                 {
                     name: languageMap.get(language).questionBlog,
-                    value: async() => {
+                    value: async () => {
                         console.log(languageMap.get(language).answerBlog);
                         open("https://blog.alpaca.run")
                         await sleep(3)
@@ -134,7 +134,7 @@ const main = async() => {
                 },
                 {
                     name: languageMap.get(language).question3,
-                    value: async() => {
+                    value: async () => {
                         console.log(languageMap.get(language).answer3);
                         open("https://cdn.alpaca.run/js/banana.html")
                         await sleep(3)
@@ -152,11 +152,11 @@ const main = async() => {
         }
     ];
 
-    const skipToQuestions2 = async() => {
+    const skipToQuestions2 = async () => {
         clearScreen()
         console.log(info);
         let answer = await prompt(questions2)
-        answer.action()  
+        answer.action()
     }
 
     const answer2 = await prompt(questions2);
