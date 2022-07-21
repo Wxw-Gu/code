@@ -52,8 +52,8 @@ const getInfo = language => {
     EMPTY_ROW,
     cc(info.professionalSkills),
     //   EMPTY_ROW,
-    t1(' Javascript  ') + MG() + t1('     Vue     ') + MG() + t1('    React     '),
-    t2('   Node.js   ') + MG() + t2('    Deno     ') + MG() + t2('    Docker    '),
+    t1(' 唱  ') + MG() + t1('     跳     ') + MG() + t1('    Rap     '),
+    t2('   芭蕾   ') + MG() + t2('    肚皮舞     ') + MG() + t2('    摇花手    '),
     EMPTY_ROW
   ];
 
