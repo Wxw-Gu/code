@@ -108,7 +108,7 @@ const main = async () => {
                     value: async () => {
                         clearScreen()
                         console.log(languageMap.get(language).answer2)
-                        const url = 'https://u.wechat.com/MI8g1d4fSdEntqOdCrp-DU8';
+                        const url = 'https://t.r.sn.cn/zKbvmS';
                         qrcode.generate(url, { small: true });
                         await sleep(10)
                         skipToQuestions2()
